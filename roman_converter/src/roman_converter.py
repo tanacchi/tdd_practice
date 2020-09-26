@@ -1,2 +1,2 @@
-def convert(num):
-    return 1
+def convert(input_str):
+    return len(input_str)

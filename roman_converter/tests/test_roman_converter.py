@@ -11,3 +11,7 @@ class TestRomanConverter(unittest.TestCase):
 
     def test_one(self):
         self.assertEqual(convert("I"), 1)
+
+    def test_two_and_three(self):
+        self.assertEqual(convert("II"), 2)
+        self.assertEqual(convert("III"), 3)
