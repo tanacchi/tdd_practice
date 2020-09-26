@@ -30,11 +30,15 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(actual, expect)
 
     def test_multiple_of_3(self):
-        actual = [fizzbuzz(i) for i in range(3, 100, 3)]
+        actual = [fizzbuzz(i) for i in range(3, 100, 3) if i % 15 != 0]
         expect = ["Fizz"] * len(actual)
-        print(actual)
-        print(expect)
         self.assertListEqual(actual, expect)
+
+    def test_multiple_of_5(self):
+        actual = [fizzbuzz(i) for i in range(5, 100, 5) if i % 15 != 0]
+        expect = ["Buzz"] * len(actual)
+        self.assertListEqual(actual, expect)
+
 
     #  def test_multiple_of_3(self):
         #  expect = ["1", "2", "Fizz",
