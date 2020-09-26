@@ -24,3 +24,7 @@ class TestRomanConverter(unittest.TestCase):
 
     def test_six(self):
         self.assertEqual(convert("VI"), 6)
+
+    def test_invalid_char(self):
+        with self.assertRaises(ValueError):
+            convert("K")
