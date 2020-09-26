@@ -1,12 +1,21 @@
+import math
+
+
+convert_map = {
+    'I': 1,   'V': 5,
+    'X': 10,  'L': 50,
+    'C': 100, 'D': 500,
+    'M': 1000
+}
+
 def convert(input_str):
     val = 0
-    prev = None
+    prev = math.inf
     for c in input_str:
-        if c == "I":
-            val += 1
-        elif c == "V":
-            val += 3 if prev == "I" else 5
-        else:
+        try:
+            curr = convert_map[c]
+            val += curr if curr <= prev else curr - prev * 2
+            prev = curr
+        except KeyError:
             raise ValueError(f"Invalid character {c}.")
-        prev = c
     return val
