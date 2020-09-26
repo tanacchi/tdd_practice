@@ -39,6 +39,10 @@ class TestFizzBuzz(unittest.TestCase):
         expect = ["Buzz"] * len(actual)
         self.assertListEqual(actual, expect)
 
+    def test_multiple_of_15(self):
+        actual = [fizzbuzz(i) for i in range(15, 100, 15)]
+        expect = ["FizzBuzz"] * len(actual)
+        self.assertListEqual(actual, expect)
 
     #  def test_multiple_of_3(self):
         #  expect = ["1", "2", "Fizz",
