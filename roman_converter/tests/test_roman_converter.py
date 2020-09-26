@@ -55,3 +55,30 @@ class TestRomanConverter(unittest.TestCase):
 
     def test_900(self):
         self.assertEqual(convert("CM"), 900)
+
+    def test_12(self):
+        self.assertEqual(convert("XII"), 12)
+
+    def test_24(self):
+        self.assertEqual(convert("XXIV"), 24)
+
+    def test_42(self):
+        self.assertEqual(convert("XLII"), 42)
+
+    def test_49(self):
+        self.assertEqual(convert("XLIX"), 49)
+
+    def test_89(self):
+        self.assertEqual(convert("LXXXIX"), 89)
+
+    def test_299(self):
+        self.assertEqual(convert("CCXCIX"), 299)
+
+    def test_493(self):
+        self.assertEqual(convert("CDXCIII"), 493)
+
+    def test_1960(self):
+        self.assertEqual(convert("MCMLX"), 1960)
+
+    def test_3999(self):
+        self.assertEqual(convert("MMMCMXCIX"), 3999)
