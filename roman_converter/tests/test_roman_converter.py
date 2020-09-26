@@ -41,3 +41,17 @@ class TestRomanConverter(unittest.TestCase):
     def test_eleven(self):
         self.assertEqual(convert("XI"), 11)
 
+    def test_fourty(self):
+        self.assertEqual(convert("XL"), 40)
+
+    def test_sixty(self):
+        self.assertEqual(convert("LX"), 60)
+
+    def test_ninety(self):
+        self.assertEqual(convert("XC"), 90)
+
+    def test_400(self):
+        self.assertEqual(convert("CD"), 400)
+
+    def test_900(self):
+        self.assertEqual(convert("CM"), 900)
