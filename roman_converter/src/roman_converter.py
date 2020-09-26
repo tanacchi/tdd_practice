@@ -1,2 +1,2 @@
-def roman_converter(num):
-    return 0
+def convert(num):
+    return 1
