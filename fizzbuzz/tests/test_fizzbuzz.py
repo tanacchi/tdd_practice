@@ -44,13 +44,14 @@ class TestFizzBuzz(unittest.TestCase):
         expect = ["FizzBuzz"] * len(actual)
         self.assertListEqual(actual, expect)
 
-    #  def test_multiple_of_3(self):
-        #  expect = ["1", "2", "Fizz",
-                  #  "4", "Buzz", "Fizz",
-                  #  "7", "8", "Fizz",
-                  #  "Buzz", "11", "Fizz",
-                  #  "13", "14", "FizzBuzz"]
-        #  self.assertListEqual()
+    def test_from_1_to_15(self):
+        expect = ["1", "2", "Fizz",
+                  "4", "Buzz", "Fizz",
+                  "7", "8", "Fizz",
+                  "Buzz", "11", "Fizz",
+                  "13", "14", "FizzBuzz"]
+        actual = [fizzbuzz(i) for i in range(1, 16)]
+        self.assertListEqual(actual, expect)
 
 
 if __name__ == '__main__':
