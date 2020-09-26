@@ -1,9 +1,7 @@
 fizz = 'Fizz'
 
 def fizzbuzz(num):
-    if num == 1:
-        return "1"
-    elif num == 2:
-        return "2"
-    else:
+    if num % 3 == 0:
         return fizz
+    else:
+        return str(num)
