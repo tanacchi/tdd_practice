@@ -14,6 +14,13 @@ class TestFizzBuzz(unittest.TestCase):
         actual = fizzbuzz(1)
         self.assertEqual(actual, expect)
 
+    def test_two(self):
+        expect = "2"
+        actual = fizzbuzz(2)
+        self.assertEqual(actual, expect)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
