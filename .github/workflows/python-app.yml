@@ -38,7 +38,7 @@ jobs:
       - name: Change working directory
         run: |
           echo "PWD: ${PWD}"
-          export PYTHONPATH=${PYTHONPATH};${PWD}/${{target}}
+          export PYTHONPATH=${PYTHONPATH};${PWD}/${{env.target}}
       - name: Run unittest
         run: |
           py -m unittest discover -s tests/ -v
