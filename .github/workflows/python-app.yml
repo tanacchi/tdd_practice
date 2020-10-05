@@ -28,6 +28,7 @@ jobs:
         target-project:
           - fizzbuzz
           - roman_converter
+          - lisp_interpreter
     steps:
       - uses: actions/checkout@v2
       - name: Run unittest
