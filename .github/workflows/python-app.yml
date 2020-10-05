@@ -32,15 +32,18 @@ jobs:
   tests:
     needs: [build]
     runs-on: ubuntu-latest
-    env:
-      target: ./fizzbuzz
+    strategy:
+      matrix:
+        target-project:
+          - fizzbuzz
+          - roman_converter
     steps:
       - uses: actions/checkout@v2
       - name: Change directory
         run: |
           echo `ls -a`
-          cd ${{env.target}}
+          cd ${{matrix.target-project}}
       - name: Run unittest
-        working-directory: ${{env.target}}
+        working-directory: ${{matrix.target-project}}
         run: |
           python3 -m unittest discover -s tests/ -v
