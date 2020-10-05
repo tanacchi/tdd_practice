@@ -33,7 +33,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     env:
-      target: fizzbuzz
+      target: ./fizzbuzz
     steps:
       - name: Run unittest
         working-directory: ${{env.target}}
