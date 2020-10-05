@@ -35,12 +35,6 @@ jobs:
     env:
       target: fizzbuzz
     steps:
-      - name: Change working directory
-        working-directory: ${{env.target}}
-        run: |
-          echo "PWD: ${PWD}"
-          echo `ls -a`
-          export PYTHONPATH=${PYTHONPATH}:${PWD}/${{env.target}}
       - name: Run unittest
         working-directory: ${{env.target}}
         run: |
