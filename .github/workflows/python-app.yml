@@ -35,3 +35,4 @@ jobs:
         working-directory: ${{matrix.target-project}}
         run: |
           python3 -m unittest discover -s tests/ -v
+          
