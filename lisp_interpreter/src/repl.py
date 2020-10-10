@@ -2,7 +2,10 @@ def tokenize(source):
     try:
         return int(source)
     except ValueError:
-        return source
+        try:
+            return float(source)
+        except ValueError:
+            return source
 
 
 def parse(source):
