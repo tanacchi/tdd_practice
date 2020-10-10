@@ -1,5 +1,13 @@
+def tokenize(source):
+    try:
+        return int(source)
+    except ValueError:
+        return source
+
+
 def read():
-    return input("> ")
+    source_str = input("> ")
+    return tokenize(source_str)
 
 
 def evaluate(src):
