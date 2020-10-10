@@ -5,9 +5,13 @@ def tokenize(source):
         return source
 
 
+def parse(source):
+    return source
+
+
 def read():
     source_str = input("> ")
-    return tokenize(source_str)
+    return parse(source_str)
 
 
 def evaluate(src):
