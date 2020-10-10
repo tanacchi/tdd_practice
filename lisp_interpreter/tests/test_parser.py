@@ -16,6 +16,11 @@ class TestParser(unittest.TestCase):
         expect = "ahi"
         self.assertEqual(actual, expect)
 
+    def test_int_primitive(self):
+        actual = parse("42")
+        expect = 42
+        self.assertEqual(actual, expect)
+
 
 if __name__ == '__main__':
     unittest.main()

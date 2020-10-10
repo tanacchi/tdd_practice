@@ -6,7 +6,7 @@ def tokenize(source):
 
 
 def parse(source):
-    return source
+    return tokenize(source)
 
 
 def read():
