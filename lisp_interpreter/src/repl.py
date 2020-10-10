@@ -11,14 +11,16 @@ def read():
 
 
 def evaluate(src):
-    return src
+    if not isinstance(src, list):
+        return src
+    return src[1] + src[2]
 
 
 if __name__ == '__main__':
     while True:
         result = evaluate(read())
 
-        print("-"*10)
+        print("-" * 10)
         print("  {}  <{}>".format(result, type(result).__name__))
-        print("-"*10)
+        print("-" * 10)
         print()
