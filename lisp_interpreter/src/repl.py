@@ -13,7 +13,10 @@ def read():
 def evaluate(src):
     if not isinstance(src, list):
         return src
-    return src[1] + src[2]
+    elif src[0] == '+':
+        return src[1] + src[2]
+    else:
+        return src[1] - src[2]
 
 
 if __name__ == '__main__':

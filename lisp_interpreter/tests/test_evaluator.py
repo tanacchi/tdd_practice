@@ -21,6 +21,11 @@ class TestEvaluator(unittest.TestCase):
         expected = 7
         self.assertEqual(actual, expected)
 
+    def test_subtraction(self):
+        actual = evaluate(['-', 9, 2])
+        expected = 7
+        self.assertEqual(actual, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
