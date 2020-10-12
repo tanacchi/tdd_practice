@@ -21,6 +21,11 @@ class TestParser(unittest.TestCase):
         expect = 3.14
         self.assertEqual(actual, expect)
 
+    def test_simple_list(self):
+        actual = parse("(+ 2 5)")
+        expect = ['+', 2, 5]
+        self.assertEquals(actual, expect)
+
 
 if __name__ == '__main__':
     unittest.main()
