@@ -28,9 +28,11 @@ jobs:
         target-project:
           - fizzbuzz
           - roman_converter
+          - lisp_interpreter
     steps:
       - uses: actions/checkout@v2
       - name: Run unittest
         working-directory: ${{matrix.target-project}}
         run: |
           python3 -m unittest discover -s tests/ -v
+          
